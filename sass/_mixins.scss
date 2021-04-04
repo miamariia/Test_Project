@@ -1,0 +1,23 @@
+@mixin btn {
+    font-weight: bold;
+    font-size: 0.78vw;
+    line-height: 150%;
+    display: block;
+    padding: 0.3125vw 0.9635vw ;
+    border-radius: 0.521vw;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin title {
+    font-family: Epilogue;
+    font-weight: bold;
+    line-height: 120%;
+    color: $title;
+}
+
+@mixin text {
+    font-size: 0.9375vw;
+    line-height: 150%;
+    color: $paragraph;
+}

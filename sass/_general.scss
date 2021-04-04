@@ -91,41 +91,83 @@ html, body {
         
     }
 
-    .btn {
-        font-weight: bold;
-        font-size: 0.78vw;
-        line-height: 150%;
-        display: block;
-        padding: 0.3125vw 0.9635vw ;
-        border-radius: 0.521vw;
-        border: none;
-
-        &__header {
-            margin-right: 1.5625vw;
-            margin-left: 0.7813vw;
-        }
-
-        &--purple {
-            color: #fff;
-            background: $primary;
-        }
-
-        &--borded {
-            background: #fff;
-            border: 2px solid #63718E;
-        }
-    }
-
-
 }
 
+.btn {
+    @include btn;
+
+     &__header {
+         margin-right: 1.5625vw;
+         margin-left: 0.7813vw;
+     }
+
+     &--purple {
+         color: #fff;
+         background: $primary;
+     }
+
+     &--borded {
+         background: #fff;
+         border: 2px solid #63718E;
+     }
+ }
+
 .content {
+    min-height: 100% ;
     grid-area: content;
 
-    &__container {
-        display: grid;
+    .promo {
+        position: relative;
         min-height: 100%;
+        display: grid;
+
+        &__container {
+            min-height: 100%;
+            display: grid;
+            grid-template: "left right" 1fr
+            / 1fr 1fr;
+        }
+
+        &__left {
+            margin-top: 10.3125vw;
+            grid-area: left;
+        }
+
+        &__title {
+            @include title;
+            font-size: 2.19vw;
+        }
+
+        &__text {
+            margin-top: 1.042vw;
+            padding-right: 1.042vw;
+            @include text;
+        }
+
+        &__btn {
+            margin-top: 1.563vw;
+            line-height: 1.042vw;
+            padding: 0.859vw 4.36vw; 
+            font-size: 1.042vw;
+        }
+
+        &__right {
+            grid-area: right;
+        }
+
+        .bg-img {
+            position: absolute;
+            margin-top: 5.468vw;
+            background: url('../image/promo-image.png')  center center/cover no-repeat;
+            width: 35.52vw;
+            height: 33.646vw;
+            max-width: 682px;
+            max-height: 646px;
+        }
     }
+    
+
+   
 }
 
 
