@@ -250,17 +250,17 @@ html, body {
     }
 
     .calculator {
-
+        padding: 2.344vw 0;
+        max-height: 450px;
         &__container {
+            padding: 3.073vw 0 3.385vw 0;
             display: grid;
             height: 100%;
             grid-template-rows: 1fr;
+            grid-gap: 20px;
             grid-template-columns: repeat(12, 1fr);
-        }
-
-        .wrapper-calc {
-            display: grid; 
-            grid-column: 1/13;
+            box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+            border-radius: 8px;
         }
 
         &__title {
@@ -269,9 +269,12 @@ html, body {
             @include title;
             font-size: $thttw;
             text-align: center;
+            line-height: 0;
+            
         }
 
         &__text {
+            margin-top: 0.833vw;
             grid-row: 3/2;
             grid-column: 4/10;
             @include text;
@@ -279,7 +282,9 @@ html, body {
         }
 
         &__select {
-
+            @include calcEl;
+            padding: 0.625vw 0 0.625vw $twnty;
+            
             &--colors {
                 grid-row: 3/4;
                 grid-column: 2 /4;
@@ -303,22 +308,37 @@ html, body {
         }
 
         &__addition {
+            @include calcEl;
             display: flex;
+            justify-content: space-evenly;
+            align-items: center;
             grid-row: 3/4;
             grid-column: 6/8;
         }
 
         &__calendar {
+            @include calcEl;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             grid-row: 3/4;
             grid-column: 8/10;
         }
 
         &__summ {
+            color: $primary;
+            font-family: Epilogue;
+            text-align: center;
+            align-self: center;
+            font-weight: bold;
+            font-size: 1.145vw;
             grid-row: 3/4;
             grid-column: 10/12;
         }
 
         &__btn {
+            font-size: $twnty;
+            font-weight: bold;
             grid-row: 4/5;
             grid-column: 10/12;
         }

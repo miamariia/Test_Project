@@ -21,3 +21,12 @@
     line-height: 150%;
     color: $paragraph;
 }
+
+@mixin calcEl {
+    @include text;
+    color: $title;
+    background: #F9FAFC;
+    box-shadow: 0px 1px 3px rgba(5, 41, 83, 0.14);
+    border-radius: 0.521vw;
+    border: none;
+}
