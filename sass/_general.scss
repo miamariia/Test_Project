@@ -489,6 +489,107 @@ html, body {
             }
         }
     }
+
+    .reviews {
+        padding: 3.542vw 0;
+        &__container {
+            height: 100%;
+        }
+
+        &__title {
+            @include title;
+            font-size: $thttw;
+            text-align: center;
+
+        }
+
+        &__text {
+            margin-top: $sxtn;
+            @include text;
+            text-align: center;
+        }
+
+        &__slider {
+            margin-top: 1.302vw;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: $twnty;
+        }
+        &__slides {
+            padding: $thttw;
+            box-shadow: 0px 2px $sxtn rgba(32, 108, 164, 0.16);
+            border-radius: 0.4167vw;
+
+            &__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &__stars {
+                display: flex;
+                img {
+                    margin-right: 0.26vw;
+                }
+                :first-child {
+                    margin-right: 0.521vw;
+                }
+                :last-child {
+                    margin-right: 0;
+                }
+
+                .text {
+                    margin-top: 0.104vw;
+                    @include text;
+                }
+            }
+
+            &__main {
+                @include text;
+            }
+
+            &__footer {
+                margin-top: 6.354vw;
+            }
+
+            &__avatar {
+                display: flex;
+                flex-direction: column;
+                 &__img {
+                     @include text;
+                     display: flex;
+                     align-items: center;
+
+                     div {
+                         margin-left: 0.521vw;
+                     }
+                 }
+                 &__name {
+                    margin-top: 0.521vw;
+                    @include text;
+                 }
+            }
+        }
+        .dots {
+            display: flex;
+            margin: 0 auto;
+            margin-top: 4.48vw;
+            .dot {
+                margin-right: $sxtn;
+                max-width: 16px;
+                max-height: 16px;
+                width: $sxtn;
+                height: $sxtn;
+                background: #E8F8FF;
+                border-radius: 50%;
+            }
+            .active {
+                background: #286DBD;
+            }
+        }
+    }
+
    
 }
 
