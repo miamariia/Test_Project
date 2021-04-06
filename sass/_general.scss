@@ -66,6 +66,7 @@ html, body {
         }
 
         &__link {
+            
             display: flex;
             align-items: center;
             color: $paragraph;
@@ -80,6 +81,7 @@ html, body {
             img {
                 max-width: 100%;
             }
+
 
             &--bold {
                 font-weight: bold;
@@ -109,6 +111,11 @@ html, body {
      &--borded {
          background: #fff;
          border: 2px solid #63718E;
+         &:hover {
+            box-shadow: none;
+            color: $primary;
+            border: 0.104vw solid $primary;
+         }
      }
  }
 
@@ -378,24 +385,31 @@ html, body {
         }
 
         &__round {
+            padding-top: 0.21vw;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #FEE5FF;
+            background-color: #E8F8FF;
             height: 2.083vw;
             width: 2.083vw;
             max-width: 40px;
             max-height: 40px;
             border-radius: 50%;
-            color: $primary;
+            color: rgba(186, 217, 231, 1);
             font-family: Epilogue;
             font-weight: bold;
             font-size: 1.25vw;
+            cursor: pointer;
+
+            &--active {
+                background-color: #FEE5FF;
+                color: $primary;
+            }
 
         }
 
         &__line {
-            background-color: $primary;
+            background-color: #E8F8FF;
             align-self: center;
             width: 10.26vw;
             height: 0.1042vw;
