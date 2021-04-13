@@ -422,7 +422,7 @@ html, body {
             grid-row: 4/5;
             display: grid;
             grid-template-columns: 1fr 5fr 5fr 1fr;
-            
+
             &__header {
                 grid-column: 2/3;
                 @include title;
